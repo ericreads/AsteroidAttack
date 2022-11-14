@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "C0JO2wjohKupgyRpldpzZiAWN7Y2aBcOs5ec4x6AdSFsHVAGyPD6cVvpSWJGpVvI3G8YGnNE8q+MpafxS58/WA==",
+  "success": true,
+  "projectFilePath": "/home/eric/Programming Projects/csharp/monogame projects/SpaceShooter/SpaceShooter.csproj",
+  "expectedPackageFiles": [
+    "/home/eric/.nuget/packages/monogame.content.builder.task/3.8.1.303/monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "/home/eric/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
