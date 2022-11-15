@@ -11,6 +11,7 @@ public class SpaceShooter : Game
     private SpriteBatch _spriteBatch;
     private StarField _starField;
     private Song _song;
+    private static bool shouldExit = false;
     public SpaceShooter()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -44,6 +45,8 @@ public class SpaceShooter : Game
     {
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        if(shouldExit)
+            Exit();
         GameScreenManager.getInstance().Update(gameTime);
         _starField.Update(gameTime);
         base.Update(gameTime);
@@ -58,5 +61,9 @@ public class SpaceShooter : Game
         _spriteBatch.End();
 
         base.Draw(gameTime);
+    }
+    public static void ShouldExit()
+    {
+        shouldExit = true;
     }
 }
