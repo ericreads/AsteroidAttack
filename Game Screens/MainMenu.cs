@@ -8,6 +8,7 @@ namespace SpaceShooter
     public class MainMenu : GameScreen
     {
         private StartGameButton _startGame;
+        private ExitButton _exitGame;
         private SpriteFont _buttonFont;
         private SpriteFont _titleFont;
         private SpriteFont _scoreFont;
@@ -26,16 +27,19 @@ namespace SpaceShooter
             _titleFont = content.Load<SpriteFont>("TitleFont");
             _scoreFont = content.Load<SpriteFont>("ScoreFont");
             _startGame = new StartGameButton("Start Game", (int)(750/2-_buttonFont.MeasureString("Start Game").X/2), 600, _buttonFont, Color.White, Color.CornflowerBlue);
+            _exitGame = new ExitButton("Exit", 200, 700, _buttonFont, Color.White, Color.Red);
         }
         public override void Update(GameTime gameTime)
         {
             _startGame.Update();
+            _exitGame.Update();
         }
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.DrawString(_titleFont, "Asteroid", new Vector2(110, 50), Color.White);
             spriteBatch.DrawString(_titleFont, "Attack", new Vector2(175, 200), Color.White);
             spriteBatch.DrawString(_scoreFont, "High Score: $" + _highScore, new Vector2(135, 350), Color.White);
+            _exitGame.Draw(spriteBatch);
             _startGame.Draw(spriteBatch);
         }
     }
